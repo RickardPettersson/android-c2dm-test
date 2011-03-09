@@ -13,7 +13,7 @@ public class C2DM extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		String accountName = "rickard.pettersson@viewserve.com";
+		String accountName = "yourgoogleaccounthere";
 		
 		String regId = C2DMessaging.getRegistrationId(this);
         if (regId != null && !"".equals(regId)) {
