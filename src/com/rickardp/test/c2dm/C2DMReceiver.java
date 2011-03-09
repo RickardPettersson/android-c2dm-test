@@ -9,7 +9,7 @@ import com.google.android.c2dm.C2DMBaseReceiver;
 
 public class C2DMReceiver extends C2DMBaseReceiver {
     public C2DMReceiver() {
-        super("rickard.pettersson@viewserve.com");
+        super("yourgoogleaccount");
     }
 
     @Override

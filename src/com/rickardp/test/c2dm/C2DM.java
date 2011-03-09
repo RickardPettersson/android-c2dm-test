@@ -12,14 +12,12 @@ public class C2DM extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
-		String accountName = "yourgoogleaccounthere";
 		
 		String regId = C2DMessaging.getRegistrationId(this);
         if (regId != null && !"".equals(regId)) {
             Log.i("C2DMTest", "No registration is needed - regId: \"" + regId + "\"");
         } else {
-            C2DMessaging.register(this, accountName);
+            C2DMessaging.register(this, "yourgoogleaccount");
         }
 	}
 }
