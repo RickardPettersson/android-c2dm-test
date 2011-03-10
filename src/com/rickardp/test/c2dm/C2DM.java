@@ -12,12 +12,15 @@ public class C2DM extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
+
 		String regId = C2DMessaging.getRegistrationId(this);
-        if (regId != null && !"".equals(regId)) {
-            Log.i("C2DMTest", "No registration is needed - regId: \"" + regId + "\"");
-        } else {
-            C2DMessaging.register(this, "yourgoogleaccount");
-        }
+		if (regId != null && !"".equals(regId)) {
+			Log.i("C2DMTest", "No registration is needed - regId: \"" + regId
+					+ "\"");
+		} else {
+			// Edit "YourRoleGoogleAccount" to your google account, the
+			// "role account" that the server using for authentication
+			C2DMessaging.register(this, "YourRoleGoogleAccount");
+		}
 	}
 }
